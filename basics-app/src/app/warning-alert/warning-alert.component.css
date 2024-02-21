@@ -1,0 +1,14 @@
+/* FILEPATH: /c:/Users/Daniel.Bandala/Documents/solera/code/basics-app/src/app/warning-alert/warning-alert.component.css */
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}

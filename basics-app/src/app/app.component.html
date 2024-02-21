@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ol>
+        <li>Task1</li>
+        <li>Task2</li>
+        <li>Task3</li>
+        <li>Task4</li>
+      </ol>
+    </div>
+  </div>
+  <app-warning-alert></app-warning-alert>
+  <app-success-alert></app-success-alert>
+  <app-server></app-server>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <label for="nameInput">Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <p>{{ username }}</p>
+      <button class="btn btn-primary" [disabled]="username===''" (click)="username=''">Reset user</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display details</button> -->
+      <button class="btn btn-primary" (click)="onToggleDetails()">Display details</button>
+      <p *ngIf="showSecret">Secret password - Tuna</p>
+      <div *ngFor="let logItem of log; let i=index" [ngStyle]="{backgroundColor: i>=5 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i>=5}">{{ logItem }}</div>
+    </div>
+  </div>
+</div>
+<br><br>
